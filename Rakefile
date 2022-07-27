@@ -4,3 +4,7 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+
+task routes: :environment do
+  puts `bundle exec rails routes`
+end

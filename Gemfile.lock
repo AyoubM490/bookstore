@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/ctran/annotate_models.git
+  revision: ae0b79c0f816b2433a3f00b9a73b3aea1bd3e84b
+  specs:
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
+      rake (>= 10.4, < 14.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -85,6 +93,7 @@ GEM
       popper_js (>= 2.9.3, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    cancancan (3.4.0)
     capybara (3.37.1)
       addressable
       matrix
@@ -281,10 +290,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  annotate!
   better_errors
   binding_of_caller
   bootsnap
   bootstrap (~> 5.1.3)
+  cancancan
   capybara
   carrierwave (~> 2.0)
   debug

@@ -2,14 +2,18 @@
 <div id="books" class="container">
   <h1>Listing Books</h1>
   <div class="text-end">
-    <%= link_to "New Book", new_book_path, class: "btn btn-outline-primary" %>
+    <% if can? :new, Book %>
+      <%= link_to "New Book", new_book_path, class: "btn btn-outline-primary" %>
+    <%end%>
   </div>
   <% @books.each do |book| %>
     <%= render book %>
     <p>
-      <%= link_to "Show this book", book %>
+      <%= link_to "Show this book", book if can? :read, book %>
     </p>
   <% end %>
 </div>
-<%= link_to "New book", new_book_path %>
+<% if can? :create, Book %>
+  <%= link_to "New book", new_book_path %>
+<%end%>
 <%= will_paginate @books, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

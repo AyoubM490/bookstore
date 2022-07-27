@@ -44,9 +44,9 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
-gem 'bootstrap', '~> 5.1.3'
-gem 'jquery-rails'
-gem 'turbolinks'
+gem "bootstrap", "~> 5.1.3"
+gem "jquery-rails"
+gem "turbolinks"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -61,6 +61,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "web-console"
+  gem "annotate", git: "https://github.com/ctran/annotate_models.git"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -76,8 +77,9 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'friendly_id', '~> 5.1'
-gem 'will_paginate', '~> 3.1', '>= 3.1.6'
-gem 'will_paginate-bootstrap-style'
-gem 'carrierwave', '~> 2.0'
-gem 'devise', '~> 4.8', '>= 4.8.1'
+gem "friendly_id", "~> 5.1"
+gem "will_paginate", "~> 3.1", ">= 3.1.6"
+gem "will_paginate-bootstrap-style"
+gem "carrierwave", "~> 2.0"
+gem "devise", "~> 4.8", ">= 4.8.1"
+gem "cancancan"
